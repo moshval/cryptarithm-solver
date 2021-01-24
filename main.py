@@ -1,0 +1,42 @@
+'''
+Nama      : Mohammad Sheva Almeyda Sofjan
+NIM/Kelas : 13519018/K01
+Deskripsi : Tugas Kecil 1 IF2211 Strategi Algoritma
+            Cryptarithmetic Solver menggunakan Algoritma Brute Force
+            (Only supports additions)
+Deskripsi File : File Utama (Driver)
+'''
+
+from time import time 
+from util import reader,outputter
+from sols import permute,slotfill,charvalue,sumChecker,isZero
+
+print("\nCryptarithmetic Solver")
+print("Dapat menyelesaikan persoalan penjumlahan cryptarithmetic")
+print("Cr : Mohammad Sheva (13519018)\n")
+
+parse = reader() # Parsing dari text file
+inittime = time() # Initial Time
+
+print("\nInput anda :\n")
+outputter(parse[1])
+print("Silakan tunggu, proses ini mungkin agak lama.\n")
+
+count = 0 # Counter jumlah tes
+havesol = False # Apakah persoalan ini dapat ditemukan solusinya?
+for data in permute(slotfill(parse[2])): # Iterasi untuk cek assigned value dari tiap char pada tiap permutasi
+    cvlist=charvalue(parse[1],data) # Assign value ke char
+    count+=1
+    if(not isZero(cvlist)): # Cek leading zero pada operand/hasil
+        if (sumChecker(cvlist)): # Cek kesamaan sum operand dan hasil
+            havesol = True
+            break # Terbatas ke 1 solusi
+
+if(havesol):
+    print("Solusi dari input anda :\n")
+    outputter(cvlist)
+else:
+    print("Tidak ditemukan solusi dari input anda")
+
+print("Total tes : ",count)
+print("Lama eksekusi : ",time()-inittime," detik")

@@ -37,7 +37,7 @@ def permute(charlist):
                 # dilanjutkan dengan menambahkan permutasi selanjutnya ke permlist secara rekursif 
                 # dengan memanggil kembali fungsi permute
                 permlist.append(first+p)
-            permlist = list(dict.fromkeys(permlist)) 
+            permlist = list(dict.fromkeys(permlist)) # Menghapus duplikat permutasi
         return permlist
 
 def charvalue(isi,charlist):

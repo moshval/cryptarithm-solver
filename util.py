@@ -35,13 +35,13 @@ def reader():
         return reader()
 
     isi[len(isi)-3]=isi[len(isi)-3][:-1] #Remove plus sign di operand terakhir
-    
-    # Another format checking
+    isi[len(isi)-2] = isi[len(isi)-1] #Delete ------
+    isi = isi[:-1]
+
+    # Another format checking dan penambahan list berisi karakter unik pada operand/hasil
     charlist = []
     isalfa = True
     for string in isi: 
-        if(string[0]=="-"):
-            continue
         if(not string.isalpha()):
             isalfa = False
             break
@@ -55,8 +55,6 @@ def reader():
         print("File tidak sesuai format, pembacaan file akan diulangi...")
         return reader()
 
-    isi[len(isi)-2] = isi[len(isi)-1] #Delete ------
-    isi = isi[:-1]
     print("Pembacaan file berhasil")
 
     return fname,isi,charlist

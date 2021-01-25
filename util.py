@@ -11,7 +11,7 @@ Deskripsi : Tugas Kecil 1 IF2211 Strategi Algoritma
 
 def reader(): 
     '''
-    Reader file
+    Reader file text, mereturn nama file, list isi file perbaris, dan list char unik
     '''
     notfound = True
     while notfound :
@@ -23,7 +23,7 @@ def reader():
              print("File tidak ditemukan. Ulangi lagi")
 
     isi = file.readlines() # Membaca isi file
-
+    file.close()
     # Mengubah ke array, menghapus karakter tak guna
     for i in range(len(isi)):
         isi[i] = isi[i].replace("\n","")

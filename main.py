@@ -6,10 +6,10 @@ Deskripsi : Tugas Kecil 1 IF2211 Strategi Algoritma
             (Only supports additions)
 Deskripsi File : File Utama (Driver)
 '''
-
-from time import time 
-from util import reader,outputter
-from sols import permute,slotfill,charvalue,sumChecker,isZero,permForm
+import sys # Buat auto exit program
+from time import time # Library Waktu
+from util import reader,outputter # Utility
+from sols import permute,slotfill,charvalue,sumChecker,isZero,permForm # Algo Solusi
 
 print("\nCryptarithmetic Solver")
 print("Dapat menyelesaikan persoalan penjumlahan cryptarithmetic")
@@ -21,6 +21,10 @@ inittime = time() # Initial Time
 print("\nInput anda :\n")
 outputter(parse[1])
 print("Silakan tunggu, proses ini mungkin agak lama.\n")
+if (len(parse[1][len(parse[1])-1]) < len(parse[1][0])): # Cek apakah banyak digit hasil lebih kecil atau lebih besar dari operand
+    print("Tidak ditemukan solusi dari input anda")
+    print("Lama eksekusi : ",time()-inittime," detik")
+    sys.exit()
 
 count = 0 # Counter jumlah tes
 havesol = False # Apakah persoalan ini dapat ditemukan solusinya?

@@ -56,6 +56,6 @@ Solusi dari input anda :
 ------
 10652
 
-Total tes :  2005114
-Lama eksekusi :  25.99932622909546  detik
+Total tes :  1002874
+Lama eksekusi :  25.188947439193726  detik
 ```

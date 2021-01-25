@@ -9,7 +9,7 @@ Deskripsi File : File Utama (Driver)
 
 from time import time 
 from util import reader,outputter
-from sols import permute,slotfill,charvalue,sumChecker,isZero
+from sols import permute,slotfill,charvalue,sumChecker,isZero,permForm
 
 print("\nCryptarithmetic Solver")
 print("Dapat menyelesaikan persoalan penjumlahan cryptarithmetic")
@@ -24,7 +24,8 @@ print("Silakan tunggu, proses ini mungkin agak lama.\n")
 
 count = 0 # Counter jumlah tes
 havesol = False # Apakah persoalan ini dapat ditemukan solusinya?
-for data in permute(slotfill(parse[2])): # Iterasi untuk cek assigned value dari tiap char pada tiap permutasi
+perm = permForm(permute(slotfill(parse[2]))) # Generate List of Permutation
+for data in perm: # Iterasi untuk cek assigned value dari tiap char pada tiap permutasi
     cvlist=charvalue(parse[1],data) # Assign value ke char
     count+=1
     if(not isZero(cvlist)): # Cek leading zero pada operand/hasil

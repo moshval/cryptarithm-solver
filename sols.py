@@ -25,7 +25,7 @@ def permute(charlist):
     if len(charlist)==0: #Kasus List Kosong
         return []
     elif len(charlist)==1: # Basis List 1 karakter
-        return [charlist]
+        return charlist
     else:
         # Rekurens; melakukan iterasi kepada tiap karakter dalam list sehingga terbentuk list permutasi 
         # dengan karakter tersebut sebagai elemen pertama, dilakukan recursively
@@ -36,7 +36,8 @@ def permute(charlist):
                 # Menambahkan elemen ke i sebagai index 0 dalam list of list permutasi,
                 # dilanjutkan dengan menambahkan permutasi selanjutnya ke permlist secara rekursif 
                 # dengan memanggil kembali fungsi permute
-                permlist.append([first]+p) 
+                permlist.append(first+p)
+            permlist = list(dict.fromkeys(permlist)) 
         return permlist
 
 def charvalue(isi,charlist):
@@ -75,3 +76,12 @@ def isZero(cvlist):
             iszero = True
             break
     return iszero
+
+def permForm(charlist):
+    '''
+    Buat ubah format hasil permutasi
+    '''
+    rdlist = []
+    for p in charlist:
+        rdlist.append(list(p))
+    return rdlist

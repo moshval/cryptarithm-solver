@@ -15,10 +15,10 @@ MONEY
 ```
 ---
 # How To Run :
-1. Run main.py
+1. Pindah ke direktori src, lalu run main.py
 2. Akan muncul tampilan berikut:\
 ```
-C:\Users\ASUS\Desktop\cryptarithm-solver>python3 main.py
+C:\Users\ASUS\Desktop\cryptarithm-solver\src>python3 main.py
 
 Cryptarithmetic Solver
 Dapat menyelesaikan persoalan penjumlahan cryptarithmetic
@@ -31,7 +31,7 @@ Masukkan Nama File (dengan ekstensi, sebagai contoh : tc1.txt) :
 
 # Contoh Eksekusi Program :
 ```
-C:\Users\ASUS\Desktop\cryptarithm-solver>python3 main.py
+C:\Users\ASUS\Desktop\cryptarithm-solver\src>python3 main.py
 
 Cryptarithmetic Solver
 Dapat menyelesaikan persoalan penjumlahan cryptarithmetic

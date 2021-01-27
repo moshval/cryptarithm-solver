@@ -6,17 +6,18 @@ Disusun oleh : Mohammad Sheva Almeyda Sofjan (13519018 | K01)
 ---
 # Deskripsi Singkat
 Dapat menyelesaikan persoalan penjumlahan cryptarithmetic\
-Input berupa file dengan ekstensi .txt, sebagai contoh:\
+Input berupa file dengan ekstensi .txt, sebagai contoh: (contoh lain terdapat pada folder test)
 ```
-SEND
-MORE+
+ SEND
+ MORE+
 ------
 MONEY
 ```
 ---
 # How To Run :
+0. Pastikan python 3 sudah terinstal pada sistem operasi anda
 1. Pindah ke direktori src, lalu run main.py
-2. Akan muncul tampilan berikut:\
+2. Akan muncul tampilan berikut:
 ```
 C:\Users\ASUS\Desktop\cryptarithm-solver\src>python3 main.py
 
@@ -57,5 +58,5 @@ Solusi dari input anda :
 10652
 
 Total tes :  1002874
-Lama eksekusi :  25.188947439193726  detik
+Lama eksekusi :  15.226629257202148  detik
 ```

@@ -1,0 +1,2 @@
+Folder kosong, hanya mau menyampaikan bahwa 
+untuk menjalankan program ini silahkan change directory ke folder src lalu run main.py
